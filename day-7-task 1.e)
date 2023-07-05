@@ -1,0 +1,22 @@
+//day-7-task 1.e) 
+<!DOCTYPE html> 
+<html>
+  <head>
+    <title>XMLHttpRequest Example</title>
+  </head>
+  <body>
+    <script>
+      var request = new XMLHttpRequest();
+   request.open("GET", "https://restcountries.com/v3.1/all");
+   request.send();
+   request.onload = function(){
+    var result = JSON.parse(request.response);
+    console.log(result);
+   var res = result.filter((ele)=>ele.usdollars);
+   console.log(res);
+   var res1 = res.map((ele)=>ele.countryname);
+   console.log(res1);
+}     
+    </script>
+  </body>
+</html>
