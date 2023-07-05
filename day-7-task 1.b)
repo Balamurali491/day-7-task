@@ -1,4 +1,4 @@
-//Question 1.b)
+ //population is less than 2 lakhs
 <!DOCTYPE html> 
 <html>
   <head>
@@ -12,7 +12,6 @@
    request.onload = function(){
     var result = JSON.parse(request.response);
     console.log(result);
-    //population is less than 2 lakhs
    var res = result.filter((ele)=>ele.population<200000);
     console.log(res);
 }
